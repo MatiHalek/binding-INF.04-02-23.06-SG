@@ -25,6 +25,9 @@
             {
                 randomNumbersArray[i] = (uint)randomNumberGenerator.Next(0, 1001);
             }
+            SortArray(randomNumbersArray);
+            Console.WriteLine(string.Join(", ", randomNumbersArray));
+            ;
         }
     }
 }
