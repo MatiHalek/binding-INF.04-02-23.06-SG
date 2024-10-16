@@ -26,7 +26,7 @@
                 randomNumbersArray[i] = randomNumberGenerator.Next(0, 1001);
             }
             BubbleSortArray(randomNumbersArray);
-            //Console.WriteLine($"Posortowana rosnąco tablica sortowaniem bąbelkowym: {string.Join(", ", randomNumbersArray)}");
+            Console.WriteLine($"Posortowana rosnąco tablica sortowaniem bąbelkowym: {string.Join(", ", randomNumbersArray)}");
             ;
         }
     }
