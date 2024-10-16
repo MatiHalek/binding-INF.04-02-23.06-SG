@@ -1,16 +1,16 @@
 ﻿namespace konsola
 {
-    internal class Program
+    public class Program
     {
-        static void SortArray(uint[] arrayToSort)
+        public static void BubbleSortArray(int[] arrayToSort)
         {
-            for(uint i = (uint)arrayToSort.Length - 1; i > 0; i--)
+            for(int i = arrayToSort.Length - 1; i > 0; i--)
             {
-                for (uint j = 0; j < i; j++)
+                for (int j = 0; j < i; j++)
                 {
                     if (arrayToSort[j] > arrayToSort[j + 1])
                     {
-                        uint tmp = arrayToSort[j];
+                        int tmp = arrayToSort[j];
                         arrayToSort[j] = arrayToSort[j + 1];
                         arrayToSort[j + 1] = tmp;
                     }
@@ -19,14 +19,14 @@
         }
         static void Main(string[] args)
         {
-            uint[] randomNumbersArray = new uint[100];
+            int[] randomNumbersArray = new int[100];
             Random randomNumberGenerator = new();
             for(int i = 0; i < randomNumbersArray.Length; i++)
             {
-                randomNumbersArray[i] = (uint)randomNumberGenerator.Next(0, 1001);
+                randomNumbersArray[i] = randomNumberGenerator.Next(0, 1001);
             }
-            SortArray(randomNumbersArray);
-            Console.WriteLine(string.Join(", ", randomNumbersArray));
+            BubbleSortArray(randomNumbersArray);
+            //Console.WriteLine($"Posortowana rosnąco tablica sortowaniem bąbelkowym: {string.Join(", ", randomNumbersArray)}");
             ;
         }
     }
